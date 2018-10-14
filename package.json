@@ -3,7 +3,6 @@
   "description": "Gatsby source plugin for adding an Atom feed as a data source",
   "version": "0.0.1",
   "author": "Pawan Hegde <contact@pawanhegde.com>",
-  "main": "gatsby-config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "build": "babel src --out-dir . --ignore **/__tests__",
