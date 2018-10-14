@@ -12,6 +12,7 @@
     "gatsby",
     "gatsbyjs",
     "gatsby-plugin",
+    "gatsby-source-plugin",
     "atom"
   ],
   "license": "MIT",
