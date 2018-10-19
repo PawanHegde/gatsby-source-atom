@@ -49,7 +49,7 @@ You can query all entries from all your sources together as follows:
     edges {
       node {
         title
-        url
+        link
       }
     }
   }
@@ -67,7 +67,7 @@ You can also access them separately based on source url and query meta informati
         description
         childrenAtomEntry {
           title
-          url
+          link
         }
       }
     }
