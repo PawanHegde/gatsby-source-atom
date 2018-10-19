@@ -12,14 +12,38 @@ exports.sourceNodes = ({ actions, createNodeId }, configOptions) => {
   let meta = {};
   let entries = [];
 
+  const processedMetaProperties = [
+    "title",
+    "description",
+    "link",
+    "xmlurl",
+    "date",
+    "pubdate",
+    "author",
+    "language",
+    "image",
+    "favicon",
+    "copyright",
+    "generator",
+    "categories"
+  ];
+
   function addMeta() {
-    Object.assign(meta, this.meta);
+    if (configOptions.exposeBasalElements === true) {
+      Object.assign(meta, this.meta);
+    } else {
+      Object.assign(meta, _.pick(this.meta, processedMetaProperties));
+    }
   }
 
   function addEntry() {
     const stream = this;
     while ((item = stream.read())) {
-      entries.push(item);
+      if (configOptions.exposeBasalElements === true) {
+        entries.push(item);
+      } else {
+        entries.push(_.pick(item, processedMetaProperties));
+      }
     }
   }
 
