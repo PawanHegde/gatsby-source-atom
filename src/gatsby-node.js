@@ -12,27 +12,50 @@ exports.sourceNodes = ({ actions, createNodeId }, configOptions) => {
   let meta = {};
   let entries = [];
 
-  const processedMetaProperties = [
-    "title",
-    "description",
-    "link",
-    "xmlurl",
-    "date",
-    "pubdate",
-    "author",
-    "language",
-    "image",
-    "favicon",
-    "copyright",
-    "generator",
-    "categories"
-  ];
+  const processedMetaFields = _.union(
+    [
+      "title",
+      "description",
+      "link",
+      "xmlurl",
+      "date",
+      "pubdate",
+      "author",
+      "language",
+      "image",
+      "favicon",
+      "copyright",
+      "generator",
+      "categories"
+    ],
+    configOptions.additionalMetaFields
+  );
+
+  const processedArticleFields = _.union(
+    [
+      "title",
+      "description",
+      "link",
+      "origlink",
+      "permalink",
+      "date",
+      "pubdate",
+      "author",
+      "guid",
+      "comments",
+      "image",
+      "categories",
+      "source",
+      "enclosures"
+    ],
+    configOptions.additionalEntryFields
+  );
 
   function addMeta() {
     if (configOptions.exposeBasalElements === true) {
       Object.assign(meta, this.meta);
     } else {
-      Object.assign(meta, _.pick(this.meta, processedMetaProperties));
+      Object.assign(meta, _.pick(this.meta, processedMetaFields));
     }
   }
 
@@ -42,7 +65,7 @@ exports.sourceNodes = ({ actions, createNodeId }, configOptions) => {
       if (configOptions.exposeBasalElements === true) {
         entries.push(item);
       } else {
-        entries.push(_.pick(item, processedMetaProperties));
+        entries.push(_.pick(item, processedArticleFields));
       }
     }
   }
