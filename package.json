@@ -1,7 +1,7 @@
 {
   "name": "gatsby-source-atom",
   "description": "Gatsby source plugin for adding an Atom feed as a data source",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Pawan Hegde <contact@pawanhegde.com>",
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
