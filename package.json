@@ -29,5 +29,12 @@
   },
   "peerDependencies": {
     "gatsby": "^2.20.12"
+  },
+  "renovate": {
+    "extends": [
+      "config:base",
+      ":preserveSemverRanges"
+    ],
+    "automerge": true
   }
 }
