@@ -18,16 +18,16 @@
   "license": "MIT",
   "repository": "https://github.com/PawanHegde/gatsby-source-atom",
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
+    "@babel/runtime": "^7.9.2",
     "feedparser": "^2.2.9",
     "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "cross-env": "^5.2.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "cross-env": "^7.0.2"
   },
   "peerDependencies": {
-    "gatsby": "^2.0.22"
+    "gatsby": "^2.20.12"
   }
 }
