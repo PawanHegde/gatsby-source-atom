@@ -28,7 +28,7 @@
     "cross-env": "^7.0.2"
   },
   "peerDependencies": {
-    "gatsby": "^2.20.12"
+    "gatsby": "^5.0.0"
   },
   "renovate": {
     "extends": [
